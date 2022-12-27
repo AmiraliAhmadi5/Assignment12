@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Assignment12(mashinHesab)">
+        <meta name="keywords" content="JavaScript">
+        <meta name="author" content="AmiraliAhmadi">
+        <meta name="viewport" content="">
+        <link type="text/css" rel="stylesheet" href="Calculator.css">
+        <title>Calculator</title>
+    </head>
+    <body>
+       <div id="row">
+        <input type="text" id="inp">
+        <div class="col">
+            <div class="nave" style="color: gray;" id="ac">AC</div>
+        </div>
+        <div class="col">
+            <div class="nave" style="color: gray;">(-)</div>
+        </div>
+        <div class="col">
+            <div class="nave" style="color: gray;" id="darsad">%</div>
+        </div>
+        <div class="col">
+            <div class="nave" style="color: coral; font-size: 25px;" id="taghsim">&#10135</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="haft">7</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="hasht">8</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="noh">9</div>
+        </div>
+        <div class="col">
+            <div class="nave" style="color: coral; font-size: 20px;" id="zarb">&#10060</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="char">4</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="panj">5</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="shesh">6</div>
+        </div>
+        <div class="col">
+            <div class="nave" style="color: coral; font-size: 23px;" id="tafrigh">&#10134</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="se">3</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="do">2</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="yek">1</div>
+        </div>
+        <div class="col">
+            <div class="nave" style="color: coral; font-size: 23px;" id="jam">&#10133</div>
+        </div>
+        <div class="col">
+            <div class="nave" id="navee">0</div>
+        </div>
+        <div class="col">
+            <div class="nav"></div>
+        </div>
+        <div class="col">
+            <div class="nave" id="dot">.</div>
+        </div>
+        <div class="col">
+            <div class="nave" style="color: coral;" id="mosavi">=</div>
+        </div>
+       </div>
+       <script>
+        var dot = document.getElementById("dot");
+        var ac = document.getElementById("ac");
+        var darsad = document.getElementById("darsad");
+
+        var inp = document.getElementById("inp");
+        var mosavi = document.getElementById("mosavi");
+        var jam = document.getElementById("jam");
+        var tafrigh = document.getElementById("tafrigh");
+        var zarb = document.getElementById("zarb");
+        var taghsim = document.getElementById("taghsim");
+        var sefr = document.getElementById("navee")
+        var yek = document.getElementById("yek");
+        var du = document.getElementById("do");
+        var se = document.getElementById("se");
+        var char = document.getElementById("char");
+        var panj = document.getElementById("panj");
+        var shesh = document.getElementById("shesh");
+        var haft = document.getElementById("haft");
+        var hasht = document.getElementById("hasht");
+        var noh = document.getElementById("noh");
+        var a , b , c;
+        jam.onclick = function(){
+            a = parseInt(inp.value);
+            inp.value = "";
+            mosavi.onclick = function(){
+            b = parseInt(inp.value);
+            c = a + b;
+            inp.value = c;
+            }
+        }
+        tafrigh.onclick = function(){
+            a = parseInt(inp.value);
+            inp.value = "";
+            mosavi.onclick = function(){
+            b = parseInt(inp.value);
+            c = a - b;
+            inp.value = c;
+            }
+        }
+        zarb.onclick = function(){
+            a = parseInt(inp.value);
+            inp.value = "";
+            mosavi.onclick = function(){
+            b = parseInt(inp.value);
+            c = a * b;
+            inp.value = c;
+            }
+        }
+        taghsim.onclick = function(){
+            a = parseInt(inp.value);
+            inp.value = "";
+            mosavi.onclick = function(){
+            b = parseInt(inp.value);
+            c = a / b;
+            inp.value = c;
+            }
+        }
+        sefr.onclick = function(){
+            inp.value = parseInt("0");
+        }
+        yek.onclick = function(){
+            inp.value = parseInt("1");
+        }
+        du.onclick = function(){
+            inp.value = parseInt("2");
+        }
+        se.onclick = function(){
+            inp.value = parseInt("3");
+        }
+        char.onclick = function(){
+            inp.value = parseInt("4");
+        }
+        panj.onclick = function(){
+            inp.value = parseInt("5");
+        }
+        shesh.onclick = function(){
+            inp.value = parseInt("6");
+        }
+        haft.onclick = function(){
+            inp.value = parseInt("7");
+        }
+        hasht.onclick = function(){
+            inp.value = parseInt("8");
+        }
+        noh.onclick = function(){
+            inp.value = parseInt("9");
+        }
+
+        dot.onclick = function(){
+            inp.value = parseInt(".")
+        }
+        ac.onclick = function(){
+            inp.value = "";
+        }
+        darsad.onclick = function(){
+            a = parseInt(inp.value);
+            inp.value = "";
+            mosavi.onclick = function(){
+            b = parseInt(inp.value);
+            c = a % b;
+            inp.value = c;
+            }
+        }
+       </script>
+    </body>
+</html>
